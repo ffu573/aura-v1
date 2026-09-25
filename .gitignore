@@ -1,0 +1,16 @@
+node_modules/
+desktop/node_modules/
+desktop/dist/
+tools/
+android/build/
+android/.gradle/
+android/local.properties
+ios/App/Pods/
+ios/App/build/
+*.xcuserstate
+.DS_Store
+dist/
+*.log
+.env
+*.exe
+
