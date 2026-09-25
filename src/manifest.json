@@ -1,0 +1,18 @@
+{
+  "name": "AURA V1",
+  "short_name": "AURA",
+  "description": "你的全能 AI 助手",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0B0E14",
+  "theme_color": "#0B0E14",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' rx='112' fill='%232DD4BF'/><path d='M256 96L96 176l160 80 160-80-160-80zM96 288l160 80 160-80M96 224l160 80 160-80' fill='%230B0E14'/></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
