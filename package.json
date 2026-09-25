@@ -1,0 +1,31 @@
+{
+  "name": "aura-v1",
+  "version": "1.0.0",
+  "description": "AURA V1 - 全能 AI 助手 (Android / iOS / macOS / Windows)",
+  "scripts": {
+    "dev": "npx http-server src -p 8080 -c-1",
+    "start": "npm run dev",
+    "build:web": "echo 'Web build complete (src folder is the web app)'",
+    "cap:init": "npx cap init AURA-V1 com.aura.app --web-dir=src",
+    "cap:android": "npx cap add android && npx cap copy android",
+    "cap:ios": "npx cap add ios && npx cap copy ios",
+    "cap:open:android": "npx cap open android",
+    "cap:open:ios": "npx cap open ios",
+    "tauri:dev": "npx tauri dev",
+    "tauri:build": "npx tauri build",
+    "build:android": "npm run build:web && npx cap sync android && cd android && ./gradlew assembleDebug",
+    "build:ios": "npm run build:web && npx cap sync ios",
+    "build:mac": "npm run tauri:build",
+    "build:windows": "npm run tauri:build",
+    "build:all": "npm run build:android && npm run build:ios && npm run build:mac && npm run build:windows"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^6.2.2",
+    "@capacitor/cli": "^6.2.2",
+    "@capacitor/core": "^6.2.2",
+    "@capacitor/ios": "^6.0.0",
+    "@tauri-apps/cli": "^1.5.0",
+    "http-server": "^14.1.1",
+    "typescript": "^7.0.2"
+  }
+}
