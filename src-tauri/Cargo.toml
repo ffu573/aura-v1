@@ -1,0 +1,19 @@
+[package]
+name = "aura-v1"
+version = "1.0.0"
+description = "AURA V1 - 全能 AI 助手"
+authors = ["AURA"]
+license = "MIT"
+repository = ""
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "1.5", features = [] }
+
+[dependencies]
+tauri = { version = "1.5", features = ["shell-open", "window-all", "fs-all", "notification-all", "global-shortcut-all"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[features]
+custom-protocol = ["tauri/custom-protocol"]
