@@ -47,19 +47,12 @@
     "mac": {
       "target": [
         {
-          "target": "dmg",
+          "target": "zip",
           "arch": ["x64", "arm64"]
         }
       ],
       "artifactName": "AURA-V1-${version}-${arch}.${ext}",
       "category": "public.app-category.utilities"
-    },
-    "dmg": {
-      "title": "AURA V1 ${version}",
-      "contents": [
-        { "x": 130, "y": 220 },
-        { "x": 410, "y": 220, "type": "link", "path": "/Applications" }
-      ]
     }
   }
 }
