@@ -1,0 +1,65 @@
+{
+  "name": "aura-v1-desktop",
+  "version": "1.0.0",
+  "description": "AURA V1 - 全能 AI 助手 (桌面版)",
+  "main": "main.js",
+  "author": "AURA",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.aura.app",
+    "productName": "AURA-V1",
+    "copyright": "Copyright © 2026 AURA",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "../src/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "artifactName": "AURA-V1-Setup-${version}.${ext}",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "AURA V1",
+      "language": "2052"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "artifactName": "AURA-V1-${version}-${arch}.${ext}",
+      "category": "public.app-category.utilities"
+    },
+    "dmg": {
+      "title": "AURA V1 ${version}",
+      "contents": [
+        { "x": 130, "y": 220 },
+        { "x": 410, "y": 220, "type": "link", "path": "/Applications" }
+      ]
+    }
+  }
+}
